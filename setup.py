@@ -57,7 +57,7 @@ with open('README.rst') as fh:
         '^.. start-no-pypi.*^.. end-no-pypi', '', fh.read(), flags=re.M | re.S)
 
 setup(
-    name='zeep',
+    name='lola_zeep',
     version='2.4.0',
     description='A modern/fast Python SOAP client based on lxml / requests',
     long_description=long_description,
