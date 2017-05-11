@@ -853,6 +853,8 @@ class SchemaVisitor(object):
             assert child.tag in sub_types, child
             item = self.process(child, node)
             assert item is not None
+            # let the sequence min_occurs override the element min occurs.
+            item.min_occurs = min(min_occurs, item.min_occurs)
             result.append(item)
 
         assert None not in result
